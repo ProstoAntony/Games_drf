@@ -5,6 +5,7 @@ from rest_framework_swagger.views import get_swagger_view
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
+
 schema_view = get_schema_view(
    openapi.Info(
       title="Games API Title",
@@ -25,6 +26,7 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path ( 'api/auth/' , include ( 'djoser.urls' ) ) ,
     path ( 'api/auth/' , include ( 'djoser.urls.jwt' ) ) ,  # JWT-токены
+
 
 
 ]
